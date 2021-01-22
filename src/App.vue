@@ -2,7 +2,6 @@
   <div id="app">
     <!-- 头部区域 -->
     <header>
-     
        <mt-header title="">
         <router-link to="/" slot="left">
           <mt-button class="logo_icon"></mt-button>
@@ -11,7 +10,7 @@
       </mt-header>
      
       <!-- 具名路由视图 -->
-      <router-view name="nav"></router-view>
+        <router-view name="nav"></router-view>
     </header>
     <div class="container">
       <!-- 默认路由视图 -->
@@ -38,17 +37,28 @@ export default {
 }
 </script>
 <style lang="less">
-  .mint-header {
-    .mint-header-button {
-        .logo_icon{
-          width: 5.1rem;
-          height: 1.2rem;
-          background: url(./assets/img/logo.png) no-repeat;
-          background-size: 100% 100%;
-         }
+  header {
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 999;
+        width: 100%;
+        .mint-header {
+          .mint-header-button {
+              .logo_icon{
+                width: 5.1rem;
+                height: 1.2rem;
+                background: url(./assets/img/logo.png) no-repeat;
+                background-size: 100% 100%;
+              }
+          }
+          .mintui-search {
+            font-size: .9rem;
+          }
+        }
     }
-    .mintui-search {
-      font-size: .9rem;
-    }
+  div.container {
+    margin-top: 4.5rem;
+   
   }
 </style>
